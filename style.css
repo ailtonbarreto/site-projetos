@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-:root{
+:root {
     --bg: #05f07a;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,8 +14,8 @@
 
 /* Header section */
 
-header{
-    width: 100%; 
+header {
+    width: 100%;
     max-width: 100%;
     padding-left: 100px;
     height: 50px;
@@ -25,7 +25,7 @@ header{
     z-index: 1000;
 }
 
-header nav a{
+header nav a {
     color: #fff;
     margin-right: 5px;
     padding: 5px 10px;
@@ -34,12 +34,12 @@ header nav a{
     text-decoration: none;
 }
 
-a.active{
+a.active {
     background: var(--bg);
     border-radius: 2px;
 }
 
-a:hover{
+a:hover {
     background: var(--bg);
     border-radius: 2px;
 }
@@ -50,7 +50,7 @@ a:hover{
 
 /* carousel */
 
-.carousel{
+.carousel {
     width: 100vw;
     height: 100vh;
     margin-top: -50px;
@@ -60,8 +60,8 @@ a:hover{
 
 
 
-.carousel .list .item{
-    width: 20vw;
+.carousel .list .item {
+    width: 19rem;
     height: 15vw;
     position: absolute;
     top: 80%;
@@ -76,7 +76,7 @@ a:hover{
 }
 
 .carousel .list .item:nth-child(1),
-.carousel .list .item:nth-child(2){
+.carousel .list .item:nth-child(2) {
     top: 0;
     left: 0;
     transform: translate(0, 0);
@@ -85,29 +85,29 @@ a:hover{
     height: 100%;
 }
 
-.carousel .list .item:nth-child(3){
+.carousel .list .item:nth-child(3) {
     left: 60%;
 }
 
-.carousel .list .item:nth-child(4){
+.carousel .list .item:nth-child(4) {
     left: calc(60% + 320px);
 }
 
-.carousel .list .item:nth-child(5){
+.carousel .list .item:nth-child(5) {
     left: calc(60% + 640px);
 }
 
-.carousel .list .item:nth-child(6){
+.carousel .list .item:nth-child(6) {
     left: calc(60% + 960px);
 }
 
-.carousel .list .item:nth-child(n+7){
+.carousel .list .item:nth-child(n+7) {
     left: calc(60% + 1280px);
     opacity: 0;
 }
 
 
-.list .item .content{
+.list .item .content {
     position: absolute;
     top: 50%;
     left: 8vw;
@@ -118,11 +118,11 @@ a:hover{
     display: none;
 }
 
-.list .item:nth-child(2) .content{
+.list .item:nth-child(2) .content {
     display: block;
 }
 
-.content .title{
+.content .title {
     font-size: 100px;
     text-transform: uppercase;
     color: var(--bg);
@@ -133,7 +133,7 @@ a:hover{
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
-.content .name{
+.content .name {
     font-size: 100px;
     text-transform: uppercase;
     font-weight: bold;
@@ -144,7 +144,7 @@ a:hover{
     animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
 
-.content .des{
+.content .des {
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 18px;
@@ -154,14 +154,14 @@ a:hover{
     animation: animate 1s ease-in-out 0.9s 1 forwards;
 }
 
-.content .btn{
+.content .btn {
     margin-left: 5px;
 
     opacity: 0;
     animation: animate 1s ease-in-out 1.2s 1 forwards;
 }
 
-.content .btn button{
+.content .btn button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
@@ -169,18 +169,18 @@ a:hover{
     border: 2px solid #fff;
 }
 
-.content .btn button:nth-child(1){
+.content .btn button:nth-child(1) {
     margin-right: 15px;
 }
 
-.content .btn button:nth-child(2){
+.content .btn button:nth-child(2) {
     background: transparent;
     color: var(--bg);
     border: 2px solid #fff;
     transition: 0.3s;
 }
 
-.content .btn button:nth-child(2):hover{
+.content .btn button:nth-child(2):hover {
     background-color: var(--bg);
     color: #fff;
     border-color: var(--bg);
@@ -189,64 +189,67 @@ a:hover{
 
 
 @keyframes animate {
-    
-    from{
+
+    from {
         opacity: 0;
         transform: translate(0, 100px);
         filter: blur(33px);
     }
 
-    to{
+    to {
         opacity: 1;
         transform: translate(0);
         filter: blur(0);
     }
 }
 
-/* Carousel */
-
-
-
-
-
-
 /* next prev arrows */
 
-.arrows{
+.arrows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     position: absolute;
-    top: 80%;
-    left: 30vw;
+    bottom: 1vw;
     z-index: 100;
-    width: 300px;
-    max-width: 30%;
+    width: 100vw;
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.arrows button{
+.arrows button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: transparent;
-    color: var(--bg);
-    border: none;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    color: #05f07a;
     outline: none;
-    font-size: 16px;
+    font-size: 18px;
     font-family: monospace;
     font-weight: bold;
-    transition: .5s;
     cursor: pointer;
+    transition: all .3s ease;
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, .25),
+        inset 0 1px 1px rgba(255, 255, 255, .3);
 }
 
-.arrows button:hover{
+.arrows button:hover {
     background: transparent;
-    color: #000;
+    color: #f7f7f7;
 }
 
 
 /* time running */
-.carousel .timeRunning{
+.carousel .timeRunning {
     position: absolute;
     z-index: 1000;
     width: 0%;
@@ -258,50 +261,57 @@ a:hover{
 }
 
 @keyframes runningTime {
-    
-    from{width: 0%;}
-    to{width: 100%;}
+
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
 
 }
 
 
 /* Responsive Design */
 
-@media screen and (max-width: 999px){
-    
-    header{
+@media screen and (max-width: 999px) {
+
+    header {
         padding-left: 50px;
     }
 
-    .list .item .content{
+    .list .item .content {
         left: 50px;
     }
 
-    .content .title, .content .name{
+    .content .title,
+    .content .name {
         font-size: 70px;
     }
 
-    .content .des{
+    .content .des {
         font-size: 16px;
     }
 
 }
 
-@media screen and (max-width: 690px){
-    header nav a{
+@media screen and (max-width: 690px) {
+    header nav a {
         font-size: 14px;
         margin-right: 0;
     }
 
-    .list .item .content{
+    .list .item .content {
         top: 40%;
     }
 
-    .content .title, .content .name{
+    .content .title,
+    .content .name {
         font-size: 45px;
     }
 
-    .content .btn button{
+    .content .btn button {
         padding: 10px 15px;
         font-size: 14px;
     }
