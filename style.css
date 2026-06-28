@@ -61,7 +61,7 @@ a:hover{
 
 
 .carousel .list .item{
-    width: 10vw;
+    width: 20vw;
     height: 15vw;
     position: absolute;
     top: 80%;
@@ -86,26 +86,25 @@ a:hover{
 }
 
 .carousel .list .item:nth-child(3){
-    left: 67%;
+    left: 60%;
 }
 
 .carousel .list .item:nth-child(4){
-    left: calc(67% + 200px);
+    left: calc(60% + 320px);
 }
 
 .carousel .list .item:nth-child(5){
-    left: calc(67% + 400px);
+    left: calc(60% + 640px);
 }
 
 .carousel .list .item:nth-child(6){
-    left: calc(67% + 600px);
+    left: calc(60% + 960px);
 }
 
 .carousel .list .item:nth-child(n+7){
-    left: calc(67% + 800px);
+    left: calc(60% + 1280px);
     opacity: 0;
 }
-
 
 
 .list .item .content{
